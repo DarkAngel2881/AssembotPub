@@ -1,41 +1,27 @@
-from datetime import datetime 
+from datetime import datetime
 
-  
+def sample_responses(input_text):
+    user_message = str(input_text).lower()
 
- def sample_responses(input_text): 
+    if user_message in ("hello", "hi", "what's up"):
 
-     user_message = str(input_text).lower() 
+        return "Hey! How's it going?"
 
-  
+    if user_message in ("who are you", "who are you?"):
+        
+        return "You can call me AssemBot and I am the way you can manage a request for a class assembly!"
 
-     if user_message in ("hello", "hi", "what's up"): 
+    if user_message in ("date?", "date", "what day is it", "what day is it?", "day", "day?"):
+        now = datetime.now()
+        date_time = "Today is " + (now.strftime("%A %d of %B %Y"))
 
-          
+        return str(date_time)
+    
+    if user_message in ("time?", "time", "what time is it", "what time is it?"):
+        now = datetime.now()
+        date_time = now.strftime("%H:%M:%S")
 
-         return "Hey! How's it going?" 
+        return str(date_time)
 
-  
-
-     if user_message in ("who are you", "who are you?"): 
-
-          
-
-         return "You can call me AssemBot and I am the way you can manage a request for a class assembly!" 
-
-  
-
-     if user_message in ("what time is it?", "time?"): 
-
-         now = datetime.now() 
-
-         date_time = now.strftime("%d/%m/%y", "%h:%m:%s") 
-
-  
-
-         return str(date_time) 
-
-  
-
-     else: 
-
-         return "I didn't understand try again!"
+    else:
+        return "I didn't understand try again!"
