@@ -30,7 +30,7 @@ def error(update, context):
 
 
 def main():
-    #declare the updater for all the relative functions and the dispatcher for teh execution
+    #declare the updater for all the relative functions and the dispatcher for the execution
     updater = Updater(keys.API_KEY, use_context=True)
     dp = updater.dispatcher
 
