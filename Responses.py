@@ -1,5 +1,7 @@
+#functions for date needings
 from datetime import datetime
 
+#filters for the responses based on the user text message
 def sample_responses(input_text):
     user_message = str(input_text).lower()
 
